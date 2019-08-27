@@ -1,0 +1,8 @@
+@custom-media --sm-viewport (width >= 640px);
+@custom-media --md-viewport (width >= 720px);
+@custom-media --lg-viewport (width >= 960px);
+@custom-media --xl-viewport (width >= 1600px);
+
+:root {
+    --primary-color: #040404;
+}
