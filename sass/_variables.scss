@@ -4,5 +4,9 @@
 @custom-media --xl-viewport (width >= 1600px);
 
 :root {
-    --primary-color: #040404;
+    --red-primary: hsl(0, 100%, 68%);
+    --blue-dark: hsl(230, 29%, 20%);
+    --blue-dark-gray: hsl(230, 11%, 40%);
+    --blue-gray: hsl(231, 7%, 65%);
+    --blue-light: hsl(207, 33%, 95%);
 }
