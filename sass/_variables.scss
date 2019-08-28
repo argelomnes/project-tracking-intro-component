@@ -1,12 +1,14 @@
 @custom-media --sm-viewport (width >= 640px);
 @custom-media --md-viewport (width >= 720px);
 @custom-media --lg-viewport (width >= 960px);
-@custom-media --xl-viewport (width >= 1600px);
 
 :root {
+    --grid-width: 1112px;
+
     --red-primary: hsl(0, 100%, 68%);
+    --red-primary-light: hsl(359, 100%, 76%);
     --blue-dark: hsl(230, 29%, 20%);
-    --blue-dark-gray: hsl(230, 11%, 40%);
+    --blue-gray-dark: hsl(230, 11%, 40%);
     --blue-gray: hsl(231, 7%, 65%);
-    --blue-light: hsl(207, 33%, 95%);
+    --blue-gray-light: hsl(207, 33%, 95%);
 }
