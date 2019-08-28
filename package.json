@@ -1,7 +1,7 @@
 {
-    "name": "dev-starter-kit",
+    "name": "project-tracking-intro-component",
     "version": "1.0.0",
-    "description": "One Paragraph of project description goes here",
+    "description": "A frontendmentor.io challenge",
     "main": "gulpfile.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
