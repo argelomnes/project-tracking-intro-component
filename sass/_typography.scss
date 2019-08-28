@@ -1,0 +1,61 @@
+h1,
+h2,
+h3,
+nav,
+.cta {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+h1 {
+    max-width: 47rem;
+
+    font-size: 3.8rem;
+    font-weight: 700;
+    line-height: 1.1;
+
+    @media (--lg-viewport) {
+        font-size: 6.4rem;
+    }
+}
+
+.headline {
+    margin: 1.9rem 0 2.6rem;
+
+    @media (--lg-viewport) {
+        margin: 2.9rem 0 4.5rem;
+    }
+}
+
+h3 {
+    margin-top: 3rem;
+
+    color: var(--blue-gray);
+    font-size: 1.25rem;
+    letter-spacing: 0.2rem;
+
+    strong {
+        padding: 0.7rem 1.1rem 0.8rem 1.4rem;
+
+        border-radius: 2rem;
+
+        background-color: var(--blue-dark);
+
+        color: #fff;
+        letter-spacing: 0.2rem;
+        margin-right: 1.7rem;
+    }
+
+    @media (--lg-viewport) {
+        margin-top: 7rem;
+
+        font-size: 1.5rem;
+    }
+}
+
+p {
+    max-width: 26.5rem;
+
+    color: var(--blue-gray-dark);
+}
