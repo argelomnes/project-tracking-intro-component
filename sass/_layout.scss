@@ -52,15 +52,11 @@ main {
 }
 
 footer {
-    display: none;
+    display: flex;
+    position: fixed;
+    right: 0;
+    bottom: 1rem;
+    left: 0;
 
-    @media (--lg-viewport) {
-        display: flex;
-        position: fixed;
-        right: 0;
-        bottom: 1rem;
-        left: 0;
-
-        justify-content: center;
-    }
+    justify-content: center;
 }
