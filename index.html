@@ -5,7 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <!-- displays site properly based on user's device -->
 
-        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
 
         <title>Frontend Mentor | Project tracking intro component</title>
         <link
@@ -29,34 +34,48 @@
         <div class="container">
             <header class="header">
                 <h1><img src="images/logo.svg" alt="logo" class="logo" /></h1>
-                <nav>
-                    <ul class="main-nav">
-                        <li class="nav-item">
-                            <a href="#">Product</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#">Features</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#">Pricing</a>
-                        </li>
-                    </ul>
 
-                    <ul class="login">
-                        <li class="nav-item">
-                            <a href="#" title="Login">Login</a>
-                        </li>
-                    </ul>
+                <nav>
+                    <input type="checkbox" id="nav" class="hidden" />
+                    <label for="nav" class="nav-toggle">
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                    </label>
+
+                    <div class="nav-wrapper">
+                        <ul class="main-nav">
+                            <li class="nav-item">
+                                <a href="#">Product</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#">Features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#">Pricing</a>
+                            </li>
+                        </ul>
+                        <ul class="login">
+                            <li class="nav-item">
+                                <a href="#" title="Login">Login</a>
+                            </li>
+                        </ul>
+                    </div>
                 </nav>
             </header>
             <!-- /header -->
 
             <main>
-                <h3><strong>New</strong> Monograph Dashboard</h3>
+                <h3 class="new-item">
+                    <strong>New</strong> Monograph Dashboard
+                </h3>
                 <h1 class="headline">Powerful insights into your team</h1>
                 <p>Project planning and time tracking for agile teams</p>
 
-                <h3><button class="cta">Schedule a demo</button> to see a live preview</h3>
+                <h3 class="cta">
+                    <button class="cta--btn">Schedule a demo</button> to see a
+                    live preview
+                </h3>
             </main>
         </div>
         <div class="device-bg">
@@ -65,9 +84,12 @@
         <footer>
             <p class="attribution">
                 Challenge by
-                <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+                <a
+                    href="https://www.frontendmentor.io?ref=challenge"
+                    target="_blank"
                     >Frontend Mentor</a
-                >. Coded by <a href="https://twitter.com/css_override">Argel Omnes</a>.
+                >. Coded by
+                <a href="https://twitter.com/css_override">Argel Omnes</a>.
             </p>
         </footer>
     </body>

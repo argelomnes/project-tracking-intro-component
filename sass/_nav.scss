@@ -1,0 +1,149 @@
+nav {
+    display: flex;
+
+    font-weight: 700;
+    text-align: center;
+
+    li {
+        width: 100%;
+    }
+
+    a {
+        display: block;
+
+        padding: 0.86rem;
+
+        transition: 0.2s;
+
+        color: var(--blue-dark);
+        letter-spacing: 1px;
+    }
+
+    // @media (--lg-viewport) {
+    //       padding: 0.7rem 1.1rem 0.8rem 1.4rem;
+    // }
+}
+
+.nav-wrapper a:hover {
+    background-color: var(--red-primary);
+
+    color: #fff;
+
+    @media (--lg-viewport) {
+        border-radius: 20px;
+    }
+}
+
+.nav-wrapper a:active {
+    background-color: var(--red-primary-light);
+}
+
+.nav-toggle {
+    z-index: 100;
+
+    width: 4rem;
+    height: 4rem;
+    margin-right: -0.7rem;
+
+    cursor: pointer;
+}
+
+.nav-toggle i {
+    display: block;
+
+    width: 2.5rem;
+    height: 0.2rem;
+    margin: auto;
+
+    background: var(--blue-dark);
+}
+
+.nav-toggle i:nth-child(1) {
+    margin-top: 1.2rem;
+}
+
+.nav-toggle i:nth-child(2),
+.nav-toggle i:nth-child(3) {
+    margin-top: 0.5rem;
+}
+
+.nav-wrapper {
+    position: fixed;
+    top: -25rem;
+    left: 3rem;
+
+    width: 85vw;
+    padding: 1.3rem 2rem;
+
+    transition: 0.3s cubic-bezier(0.94, 0.06, 0.61, 0.92);
+
+    border: solid 1px #fff;
+    border-radius: 3px;
+
+    opacity: 0;
+    background: #fff;
+    box-shadow: 0 0.8rem 1.2rem rgba(0, 0, 0, 0.25);
+}
+
+#nav:checked + .nav-toggle {
+    transform: rotate(45deg);
+}
+
+#nav:checked + .nav-toggle i,
+#nav + .nav-toggle i {
+    transition: transform 0.2s ease-out;
+}
+
+#nav:checked + .nav-toggle i:nth-child(1) {
+    transform: translateY(7px) rotate(180deg);
+}
+
+#nav:checked + .nav-toggle i:nth-child(2) {
+    opacity: 0;
+}
+
+#nav:checked + .nav-toggle i:nth-child(3) {
+    transform: translateY(-7px) rotate(90deg);
+}
+
+#nav:checked ~ .nav-wrapper {
+    z-index: 90;
+    top: 10rem;
+
+    opacity: 1;
+}
+
+#nav + .nav-toggle i + nav {
+    display: hidden;
+}
+
+.login {
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 1.5rem;
+    padding-top: 1.2rem;
+
+    border-top: solid 1px var(--blue-gray-light);
+
+    & a {
+        color: var(--blue-gray);
+    }
+
+    &::before {
+        @media (--lg-viewport) {
+            content: '';
+
+            display: block;
+
+            align-self: center;
+
+            width: 1rem;
+            height: 1rem;
+            margin: 0 2.1rem;
+
+            background-color: var(--blue-gray);
+        }
+    }
+}

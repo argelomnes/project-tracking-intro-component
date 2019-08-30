@@ -17,13 +17,20 @@ body {
     background-color: #fff;
 
     color: var(--blue-dark);
-    font-family: 'Barlow', sans-serif;
+    font-family: "Barlow", sans-serif;
     font-size: 1.8rem;
     font-weight: 400;
-    letter-spacing: -0.05rem;
-    line-height: 1.6;
+    line-height: 1.5;
 }
 
 img {
     display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
 }
