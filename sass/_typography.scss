@@ -18,9 +18,10 @@ nav,
     line-height: 1;
 
     @media (--lg-viewport) {
-        margin: 2.9rem 0 4.5rem;
+        margin: 1.8rem 0 3.1rem;
 
-        font-size: 6.4rem;
+        font-size: 6.5rem;
+        line-height: 0.98;
     }
 }
 
@@ -32,15 +33,7 @@ h3 {
     letter-spacing: 1rem;
 
     strong {
-        margin-right: 1rem;
-        padding: 0.5rem 1.1rem;
-
-        border-radius: 20px;
-
-        background-color: var(--blue-dark);
-
         color: #fff;
-        letter-spacing: 0.15rem;
     }
 
     @media (--lg-viewport) {
@@ -54,11 +47,40 @@ h3 {
     margin-top: 3.1rem;
 
     letter-spacing: 0.6rem;
+
+    @media (--lg-viewport) {
+        margin-top: 3rem;
+
+        letter-spacing: 0.5rem;
+    }
+
+    & strong {
+        margin-right: 1rem;
+        padding: 0.5rem 1.1rem;
+
+        border-radius: 20px;
+
+        background-color: var(--blue-dark);
+
+        letter-spacing: 0.15rem;
+
+        @media (--lg-viewport) {
+            margin-right: 0.4rem;
+            padding: 0.4rem 1rem;
+        }
+    }
 }
 
 .cta {
     font-size: 1.3rem;
     letter-spacing: 0.13rem;
+
+    @media (--lg-viewport) {
+        margin-top: 6.4rem;
+
+        font-size: 1.47rem;
+        letter-spacing: 0.25rem;
+    }
 }
 
 .cta--btn {
@@ -72,16 +94,14 @@ h3 {
 
     background-color: var(--red-primary);
 
-    color: #fff;
     font-size: inherit;
-    font-weight: 700;
     letter-spacing: 0.16rem;
 
     cursor: pointer;
 
     @media (--lg-viewport) {
-        margin-right: 2.4rem;
-        padding: 1.8rem 3.3rem;
+        margin-right: 2rem;
+        padding: 1.5rem 3.3rem;
     }
 
     &:hover {
