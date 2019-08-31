@@ -139,9 +139,9 @@ nav {
     }
 
     li {
-        display: flex;
-
-        align-items: center;
+        @media (--lg-viewport) {
+            display: flex;
+        }
     }
 
     & li::before {
