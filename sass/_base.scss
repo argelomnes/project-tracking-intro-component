@@ -17,10 +17,9 @@ body {
     background-color: #fff;
 
     color: var(--blue-dark);
-    font-family: "Barlow", sans-serif;
+    font-family: 'Barlow', sans-serif;
     font-size: 1.8rem;
     font-weight: 400;
-    line-height: 1.5;
 }
 
 img {
@@ -33,4 +32,72 @@ a {
 
 ul {
     list-style: none;
+}
+
+h1,
+h3,
+nav,
+.cta--btn {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.headline {
+    margin: 1.8rem 0 1.3rem;
+
+    font-size: 3.8rem;
+    font-weight: 700;
+    letter-spacing: -0.05rem;
+    line-height: 1;
+
+    @media (--mobile-m) {
+        margin-bottom: 1.7rem;
+
+        font-size: 4.1rem;
+    }
+
+    @media (--tablet) {
+        font-size: 5.1rem;
+    }
+
+    @media (--laptop-l) {
+        margin: 2.1rem 0 3.1rem;
+
+        font-size: 6.5rem;
+        line-height: 0.98;
+    }
+}
+
+h3 {
+    margin-top: 2.4rem;
+
+    color: var(--blue-gray);
+    font-size: 1.25rem;
+    letter-spacing: 1rem;
+
+    & strong {
+        color: #fff;
+    }
+
+    @media (--mobile-m) {
+        margin-top: 2.7rem;
+
+        font-size: 1.5rem;
+    }
+}
+
+p {
+    max-width: 29rem;
+
+    color: var(--blue-gray-dark);
+    line-height: 1.4;
+
+    @media (--tablet) and (max-width: 840px) {
+        max-width: unset;
+    }
+}
+
+.hidden {
+    display: none;
 }
