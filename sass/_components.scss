@@ -1,0 +1,352 @@
+.container {
+    max-width: var(--grid-width);
+    margin: 1.5rem 2rem;
+
+    @media (--mobile-m) {
+        margin: 3rem 3.2rem;
+    }
+
+    @media (--laptop-l) {
+        margin: 6rem auto 2rem;
+        padding-left: 0.8rem;
+    }
+}
+
+.header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    @media (max-width: 640px) {
+        width: 2.4rem;
+    }
+}
+
+nav {
+    display: flex;
+
+    font-weight: 700;
+    text-align: center;
+}
+
+@media (max-width: 759px) {
+    .nav-toggle {
+        z-index: 100;
+
+        width: 4rem;
+        height: 4rem;
+        margin-right: -0.7rem;
+
+        cursor: pointer;
+    }
+
+    .nav-toggle i {
+        display: block;
+
+        width: 2.5rem;
+        height: 0.2rem;
+        margin: auto;
+
+        background: var(--blue-dark);
+    }
+
+    .nav-toggle i:nth-child(1) {
+        margin-top: 1.2rem;
+    }
+
+    .nav-toggle i:nth-child(2),
+    .nav-toggle i:nth-child(3) {
+        margin-top: 0.5rem;
+    }
+
+    #nav:checked + .nav-toggle {
+        transform: rotate(45deg);
+    }
+
+    #nav:checked + .nav-toggle i,
+    #nav + .nav-toggle i {
+        transition: transform 0.2s ease-out;
+    }
+
+    #nav:checked + .nav-toggle i:nth-child(1) {
+        transform: translateY(7px) rotate(180deg);
+    }
+
+    #nav:checked + .nav-toggle i:nth-child(2) {
+        opacity: 0;
+    }
+
+    #nav:checked + .nav-toggle i:nth-child(3) {
+        transform: translateY(-7px) rotate(90deg);
+    }
+
+    #nav:checked ~ .nav-wrapper {
+        z-index: 90;
+        top: 10rem;
+
+        opacity: 1;
+    }
+
+    #nav + .nav-toggle i + nav {
+        display: hidden;
+    }
+}
+
+.nav-wrapper,
+.main-nav {
+    @media (min-width: 600px) {
+        display: flex;
+    }
+}
+
+.nav-wrapper {
+    @media (max-width: 759px) {
+        position: fixed;
+        top: -25rem;
+        left: 3rem;
+
+        width: 85vw;
+        padding: 1.3rem 2rem;
+
+        transition: 0.3s cubic-bezier(0.94, 0.06, 0.61, 0.92);
+
+        border: solid 1px #fff;
+        border-radius: 3px;
+
+        opacity: 0;
+        background: #fff;
+        box-shadow: 0 0.8rem 1.2rem rgba(0, 0, 0, 0.25);
+    }
+}
+
+.nav-item {
+    width: 100%;
+
+    & a {
+        display: block;
+
+        padding: 0.86rem 1.1rem;
+
+        transition: 0.2s;
+
+        color: var(--blue-dark);
+        font-size: 1.7rem;
+        letter-spacing: 0.05rem;
+    }
+
+    & a:hover {
+        background-color: var(--red-primary);
+
+        color: #fff;
+
+        @media (--laptop-l) {
+            border-radius: 20px;
+        }
+    }
+
+    & a:active {
+        background-color: var(--red-primary-light);
+    }
+
+    @media (--laptop) {
+        &:not(:last-child) {
+            margin-right: 1.2rem;
+        }
+    }
+}
+
+.login {
+    & a {
+        color: var(--blue-gray);
+    }
+
+    & li {
+        @media (--laptop) {
+            display: flex;
+        }
+    }
+
+    & li::before {
+        @media (--laptop) {
+            content: '';
+
+            display: block;
+
+            align-self: center;
+
+            width: 0.7rem;
+            height: 0.7rem;
+            margin: 0 3.2rem;
+
+            border-radius: 100%;
+
+            background-color: var(--blue-gray);
+        }
+    }
+
+    @media (--mobile-m-max) {
+        margin-top: 1.5rem;
+        padding-top: 1.2rem;
+
+        border-top: solid 1px var(--blue-gray-light);
+    }
+}
+
+.device-bg {
+    position: absolute;
+    z-index: -10;
+    top: 0;
+    right: 0;
+
+    width: 50vw;
+    height: 53vh;
+
+    border-radius: 0 0 0 55px;
+
+    background-color: var(--blue-gray-light);
+
+    & > img {
+        width: 98vw;
+        margin-top: 15vh;
+        float: right;
+
+        @media (--laptop) {
+            width: 48vw;
+            margin-top: 23.5vh;
+        }
+    }
+
+    @media (--laptop) {
+        width: 48.9vw;
+        height: 47vh;
+    }
+}
+
+main {
+    margin-top: 44vh;
+
+    @media (--mobile-s) {
+        margin-top: 47.5vh;
+    }
+
+    @media (--tablet) {
+        margin-top: 62.5vh;
+    }
+    @media (--laptop) {
+        margin-top: 18.1vh;
+    }
+}
+
+.text-container {
+    max-width: 47rem;
+
+    @media (--tablet) and (max-width: 840px) {
+        margin: auto;
+        text-align: center;
+    }
+
+    @media (--laptop-l) {
+        max-width: 47rem;
+    }
+}
+
+.new-item {
+    letter-spacing: 0.5rem;
+
+    & strong {
+        margin-right: 0.6rem;
+        padding: 0.3rem 1rem;
+
+        border-radius: 20px;
+
+        background-color: var(--blue-dark);
+
+        letter-spacing: 0.15rem;
+
+        @media (--large-viewport) {
+            margin-right: 0.4rem;
+            padding: 0.4rem 1rem;
+        }
+    }
+}
+
+.cta {
+    font-size: 1.3rem;
+    letter-spacing: 0.1rem;
+
+    @media (--mobile-s-max) {
+        text-align: center;
+    }
+
+    @media (--laptop-l) {
+        margin-top: 6.75rem;
+
+        font-size: 1.47rem;
+        letter-spacing: 0.25rem;
+    }
+}
+
+.cta--btn {
+    margin-right: 1.7rem;
+    padding: 1.25rem 2.3rem;
+
+    transition: 0.3s;
+
+    border: 0;
+    border-radius: 5px;
+
+    background-color: var(--red-primary);
+
+    font-size: inherit;
+    letter-spacing: 0.15rem;
+
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.01);
+
+        box-shadow: 0.1rem 0.2rem 1rem rgba(0, 0, 0, 0.3);
+    }
+
+    &:active {
+        position: relative;
+        top: 1px;
+
+        transform: scale(0.99);
+
+        background-color: var(--red-primary-light);
+        box-shadow: 0 0.15rem 0.3rem rgba(0, 0, 0, 0.6);
+    }
+
+    @media (--mobile-s-max) {
+        display: block;
+
+        margin: auto;
+    }
+
+    @media (--laptop-l) {
+        margin-right: 1.9rem;
+        padding: 1.56rem 3.56rem;
+        letter-spacing: 0.12rem;
+    }
+}
+
+footer {
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 7vh;
+
+    padding: 1rem;
+
+    @media (--laptop-l) {
+        margin-top: 10vh;
+    }
+    @media (min-width: 1900px) {
+        margin-top: 24vh;
+    }
+}

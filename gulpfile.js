@@ -27,24 +27,35 @@ function html() {
 }
 
 function css() {
-    return gulp
-        .src('./sass/main.scss')
-        .pipe(sourcemaps.init())
-        .pipe(sass.sync({ outputStyle: 'compressed' }).on('error', sass.logError))
-        .pipe(postcss([postcssPresetEnv({ stage: 0, autoprefixer: { grid: true } })]))
-        .pipe(
-            purgecss({
-                content: [paths.html.src]
-            })
-        )
-        .pipe(
-            rename({
-                basename: 'style'
-            })
-        )
-        .pipe(sourcemaps.write())
-        .pipe(gulp.dest(paths.css.dest))
-        .pipe(browsersync.stream());
+    return (
+        gulp
+            .src('./sass/main.scss')
+            .pipe(sourcemaps.init())
+            .pipe(sass().on('error', sass.logError))
+            // .pipe(
+            //     sass
+            //         .sync({ outputStyle: 'compressed' })
+            //         .on('error', sass.logError)
+            // )
+            .pipe(
+                postcss([
+                    postcssPresetEnv({ stage: 0, autoprefixer: { grid: true } })
+                ])
+            )
+            .pipe(
+                purgecss({
+                    content: [paths.html.src]
+                })
+            )
+            .pipe(
+                rename({
+                    basename: 'style'
+                })
+            )
+            .pipe(sourcemaps.write())
+            .pipe(gulp.dest(paths.css.dest))
+            .pipe(browsersync.stream())
+    );
 }
 
 function watch() {

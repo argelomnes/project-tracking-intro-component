@@ -1,7 +1,17 @@
-@custom-media --sm-viewport (width >= 640px);
-@custom-media --md-viewport (width >= 720px);
-@custom-media --mdx-viewport (width <= 719px);
-@custom-media --lg-viewport (width >= 1200px);
+// mobile
+@custom-media --mobile-s-max (max-width: 350px);
+@custom-media --mobile-s (min-width: 360px);
+@custom-media --mobile-m (min-width: 375px);
+@custom-media --mobile-m-max (max-width: 420px);
+@custom-media --mobile-l (min-width: 410px);
+@custom-media --mobile-max-height (max-height: 800px);
+
+// tablet
+@custom-media --tablet (min-width: 760px);
+
+// latop
+@custom-media --laptop (min-width: 960px);
+@custom-media --laptop-l (min-width: 1280px);
 
 :root {
     --grid-width: 1126px;
