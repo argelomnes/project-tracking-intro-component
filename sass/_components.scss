@@ -137,18 +137,9 @@ nav {
         letter-spacing: 0.05rem;
     }
 
-    & a:hover {
-        background-color: var(--red-primary);
-
-        color: #fff;
-
-        @media (--laptop-l) {
-            border-radius: 20px;
-        }
-    }
-
+    & a:hover,
     & a:active {
-        background-color: var(--red-primary-light);
+        text-decoration: underline;
     }
 
     @media (--laptop) {
